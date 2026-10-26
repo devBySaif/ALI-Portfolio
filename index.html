@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohammad Ali Masud | CSE Undergraduate &amp; IT Engineer</title>
+  <meta name="description" content="Portfolio of Mohammad Ali Masud, Computer Science and Engineering undergraduate at AIUB with experience in software development, databases and IT infrastructure.">
+  <meta name="theme-color" content="#0b0e17">
+  <link rel="icon" type="image/png" href="public/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Apply the saved theme before first paint to avoid a flash */
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- Icon sprite (Lucide-style, inline so no CDN is required) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6M10 22h4"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.31L4.5 19a2 2 0 0 0 1.74 3h11.52a2 2 0 0 0 1.74-3L14 9.31V2"/><path d="M8.5 2h7M7 16h10"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#home" class="logo" aria-label="Mohammad Ali Masud, home">
+      <svg class="icon logo__icon" aria-hidden="true"><use href="#i-code"/></svg>
+      <span> A.M</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#home" data-nav="home">Home</a></li>
+        <li><a class="nav__link" href="#about" data-nav="about">About</a></li>
+        <li><a class="nav__link" href="#projects" data-nav="projects">Projects</a></li>
+        <li><a class="nav__link" href="#skills" data-nav="skills">Skills</a></li>
+        <li><a class="nav__link" href="#experience" data-nav="experience">Experience</a></li>
+        <li><a class="nav__link" href="#research" data-nav="research">Research</a></li>
+        <li><a class="nav__link" href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+      <a class="btn btn--outline btn--sm nav__cv-mobile" href="public/files/resume.pdf" download="Mohammad-Ali-Masud-CV.pdf">
+        <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV
+      </a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn btn--outline btn--sm navbar__cv" href="public/files/resume.pdf" download="Mohammad-Ali-Masud-CV.pdf">
+        <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Download CV
+      </a>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home" data-nav-group="home">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <h1 class="hero__name reveal-load">Mohammad Ali <span class="accent">Masud</span></h1>
+      <p class="hero__role reveal-load" aria-label="CSE Undergraduate, IT and Software Engineer">
+        <span>CSE Undergraduate</span>
+        <span class="hero__divider" aria-hidden="true"></span>
+        <span class="accent hero__typed" aria-hidden="true">IT &amp; Software Engineer</span>
+      </p>
+      <p class="hero__intro reveal-load">
+        Computer Science and Engineering undergraduate at AIUB with a strong foundation in software development,
+        databases, networking and hardware-software troubleshooting. Cisco IT Essentials certified.
+      </p>
+      <div class="hero__cta reveal-load">
+        <a class="btn btn--primary" href="#projects">
+          <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> View My Projects
+          <svg class="icon icon--sm" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+        </a>
+        <a class="btn btn--outline" href="#contact">
+          <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Contact Me
+        </a>
+      </div>
+      <ul class="socials reveal-load" aria-label="Social links">
+        <li><a href="https://github.com/masud-ali" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+        <li><a href="https://linkedin.com/in/mohammad-ali-masud-28341a278" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="mailto:mohammaddalimasud1010@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+        <li><a href="public/files/resume.pdf" download="Mohammad-Ali-Masud-CV.pdf" aria-label="Download CV"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></a></li>
+      </ul>
+    </div>
+
+    <div class="hero__visual reveal-load">
+      <div class="photo">
+        <div class="photo__glow" aria-hidden="true"></div>
+        <div class="photo__frame">
+          <img src="public/images/Gemini_Generated_Image_5npalr5npalr5npa.jpg.jpeg" width="2400" height="1792" alt="Portrait of Mohammad Ali Masud">
+        </div>
+
+        <div class="code-card" aria-hidden="true">
+          <i class="bar bar--o"></i><i class="bar bar--g"></i>
+          <i class="bar bar--b"></i><i class="bar bar--b2"></i>
+          <i class="bar bar--y"></i><i class="bar bar--g"></i>
+        </div>
+
+        <p class="tagline" aria-hidden="true">Build<br>Learn<br>Grow</p>
+
+        <div class="status">
+          <span class="status__dot" aria-hidden="true"></span>
+          <div>
+            <strong>Open to opportunities</strong>
+            <span>Entry-level IT &amp; software roles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="scroll-indicator" href="#about" aria-label="Scroll to About section">
+    <span class="mouse" aria-hidden="true"></span>
+    <svg class="icon icon--sm" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section section--alt" id="about" data-nav-group="about">
+  <div class="container about__grid">
+    <div class="about__text reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>About Me</p>
+      <h2 class="section__title">Building Dependable<br><span class="accent">Tech Solutions</span></h2>
+      <p>
+        I'm a Computer Science and Engineering undergraduate at American International University-Bangladesh
+        (AIUB) with a CGPA of 3.94/4.00. My foundation covers network configuration, hardware-software troubleshooting,
+        database management and software development.
+      </p>
+      <p>
+        Alongside my studies I teach physics to Class 9 and 10 students, and I am the first author of a research paper
+        accepted at the IEEE CSDE 2026 conference. I'm looking for an entry-level IT engineering opportunity where I can
+        apply my skills in reliable infrastructure and software.
+      </p>
+      <div class="langs">
+        <h3 class="langs__title"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Languages</h3>
+        <ul class="chips">
+          <li class="chip">English · Fluent</li>
+          <li class="chip">Bangla · Native</li>
+          <li class="chip">Hindi · Fluent (spoken)</li>
+          <li class="chip">Urdu · Fluent (spoken)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about__cards">
+      <article class="card feature reveal">
+        <svg class="icon feature__icon feature__icon--orange" aria-hidden="true"><use href="#i-code"/></svg>
+        <h3>Software Development</h3>
+        <p>C#, Java, C++, Python, PHP and SQL for desktop and web applications.</p>
+      </article>
+      <article class="card feature reveal">
+        <svg class="icon feature__icon feature__icon--blue" aria-hidden="true"><use href="#i-database"/></svg>
+        <h3>Database Management</h3>
+        <p>Oracle, MySQL, PL/SQL and Microsoft SQL Server, from ER modeling to stored procedures.</p>
+      </article>
+      <article class="card feature reveal">
+        <svg class="icon feature__icon feature__icon--yellow" aria-hidden="true"><use href="#i-server"/></svg>
+        <h3>IT Infrastructure</h3>
+        <p>LAN setup, CCTV and access control, PABX support, and OS and hardware troubleshooting.</p>
+      </article>
+      <article class="card feature reveal">
+        <svg class="icon feature__icon feature__icon--purple" aria-hidden="true"><use href="#i-cpu"/></svg>
+        <h3>AI &amp; Research</h3>
+        <p>Deep learning, computer vision and statistical data analysis, with an IEEE CSDE 2026 paper.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects" data-nav-group="projects">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Projects</p>
+      <h2 class="section__title">Things I've <span class="accent">Built</span></h2>
+    </header>
+    <div class="grid grid--3">
+      <article class="card project reveal">
+        <div class="project__top">
+          <span class="project__icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+          <a class="project__link" href="https://github.com/masud-ali/Delivery-Management-System_cSharp-Project" target="_blank" rel="noopener noreferrer" aria-label="Delivery Management System on GitHub (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+        </div>
+        <h3>Delivery Management System</h3>
+        <p class="project__kind">C# desktop application</p>
+        <p>A desktop delivery and logistics management system with multi-role authentication (Admin, Delivery Agent, Customer), order tracking, billing automation and real-time delivery status.</p>
+        <ul class="tags"><li>C#</li><li>.NET Windows Forms</li><li>SQL</li></ul>
+      </article>
+
+      <article class="card project reveal">
+        <div class="project__top">
+          <span class="project__icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></span>
+          <a class="project__link" href="https://github.com/masud-ali/DATA-BASE_PROJECT" target="_blank" rel="noopener noreferrer" aria-label="Database Management System project on GitHub (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+        </div>
+        <h3>Database Management System</h3>
+        <p class="project__kind">Relational database design</p>
+        <p>A relational database with normalized schemas, ER modeling and role-based access control, plus complex SQL queries, PL/SQL stored procedures and triggers for data integrity and fast queries.</p>
+        <ul class="tags"><li>Oracle</li><li>MySQL</li><li>PL/SQL</li></ul>
+      </article>
+
+      <article class="card project reveal">
+        <div class="project__top">
+          <span class="project__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <a class="project__link" href="https://github.com/masud-ali/Wabtec-project" target="_blank" rel="noopener noreferrer" aria-label="Wabtec Web Management Application on GitHub (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+        </div>
+        <h3>Wabtec Web Management Application</h3>
+        <p class="project__kind">Responsive web application</p>
+        <p>A responsive web app for managing user workflows and operational records, with secure user authentication, dynamic dashboard interfaces and backend database integration.</p>
+        <ul class="tags"><li>HTML</li><li>CSS</li><li>PHP</li><li>MySQL</li></ul>
+      </article>
+    </div>
+    <p class="section__note reveal">More work on <a href="https://github.com/masud-ali" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section--alt" id="skills" data-nav-group="skills">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Skills</p>
+      <h2 class="section__title">Tools &amp; <span class="accent">Technologies</span></h2>
+    </header>
+    <div class="grid grid--3">
+      <article class="card skill reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> Programming Languages</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">C#</span>C#</li>
+          <li><span class="skill__icon" aria-hidden="true">C++</span>C++</li>
+          <li><span class="skill__icon" aria-hidden="true">Jv</span>Java</li>
+          <li><span class="skill__icon" aria-hidden="true">Py</span>Python</li>
+          <li><span class="skill__icon" aria-hidden="true">R</span>R</li>
+          <li><span class="skill__icon" aria-hidden="true">PHP</span>PHP</li>
+          <li><span class="skill__icon" aria-hidden="true">ASM</span>Assembly</li>
+          <li><span class="skill__icon" aria-hidden="true">SQL</span>SQL</li>
+          <li><span class="skill__icon" aria-hidden="true">Ln</span>Linux</li>
+        </ul>
+      </article>
+      <article class="card skill reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Web Technologies</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">5</span>HTML</li>
+          <li><span class="skill__icon" aria-hidden="true">3</span>CSS</li>
+          <li><span class="skill__icon" aria-hidden="true">JS</span>JavaScript</li>
+          <li><span class="skill__icon" aria-hidden="true">PHP</span>PHP</li>
+        </ul>
+      </article>
+      <article class="card skill reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg> Databases</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">Or</span>Oracle Database</li>
+          <li><span class="skill__icon" aria-hidden="true">PL</span>PL/SQL</li>
+          <li><span class="skill__icon" aria-hidden="true">My</span>MySQL</li>
+          <li><span class="skill__icon" aria-hidden="true">MS</span>Microsoft SQL Server</li>
+        </ul>
+      </article>
+      <article class="card skill reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg> AI, Data &amp; Design</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">DL</span>Deep Learning</li>
+          <li><span class="skill__icon" aria-hidden="true">Σ</span>Statistical Data Analysis</li>
+          <li><span class="skill__icon" aria-hidden="true">CV</span>Computer Vision (CVPR)</li>
+          <li><span class="skill__icon" aria-hidden="true">AC</span>AutoCAD</li>
+          <li><span class="skill__icon" aria-hidden="true">3D</span>CAD</li>
+          <li><span class="skill__icon" aria-hidden="true">Gfx</span>Computer Graphics Design</li>
+        </ul>
+      </article>
+      <article class="card skill reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg> IT Infrastructure &amp; Networking</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">LAN</span>LAN Configuration</li>
+          <li><span class="skill__icon" aria-hidden="true">☁</span>Cloud Connectivity</li>
+          <li><span class="skill__icon" aria-hidden="true">PC</span>PC Building</li>
+          <li><span class="skill__icon" aria-hidden="true">HW</span>Hardware Repair &amp; Upgrade</li>
+          <li><span class="skill__icon" aria-hidden="true">OS</span>OS Troubleshooting (Windows, Linux, OS X, Mobile)</li>
+          <li><span class="skill__icon" aria-hidden="true">TV</span>CCTV &amp; Video Surveillance</li>
+          <li><span class="skill__icon" aria-hidden="true">AC</span>Access Control &amp; PABX</li>
+          <li><span class="skill__icon" aria-hidden="true">Pr</span>Printer Sharing</li>
+          <li><span class="skill__icon" aria-hidden="true">Sec</span>Host, Data &amp; Network Security</li>
+        </ul>
+      </article>
+      <article class="card skill reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg> Tools</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">Ci</span>Cisco Packet Tracer</li>
+          <li><span class="skill__icon" aria-hidden="true">Git</span>Git</li>
+          <li><span class="skill__icon" aria-hidden="true">GH</span>GitHub</li>
+          <li><span class="skill__icon" aria-hidden="true">VS</span>Visual Studio</li>
+          <li><span class="skill__icon" aria-hidden="true">&lt;/&gt;</span>VS Code</li>
+          <li><span class="skill__icon" aria-hidden="true">AC</span>AutoCAD</li>
+          <li><span class="skill__icon" aria-hidden="true">Rs</span>RStudio</li>
+          <li><span class="skill__icon" aria-hidden="true">X</span>Excel</li>
+          <li><span class="skill__icon" aria-hidden="true">P</span>PowerPoint</li>
+          <li><span class="skill__icon" aria-hidden="true">W</span>Word</li>
+        </ul>
+      </article>
+      <article class="card skill skill--wide reveal">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg> Other Skills</h3>
+        <ul class="tags">
+          <li><span class="skill__icon" aria-hidden="true">DS</span>Data Structures</li>
+          <li><span class="skill__icon" aria-hidden="true">A→Z</span>Algorithms</li>
+          <li><span class="skill__icon" aria-hidden="true">OOP</span>Object-Oriented Programming</li>
+          <li><span class="skill__icon" aria-hidden="true">?</span>Problem Solving</li>
+          <li><span class="skill__icon" aria-hidden="true">QA</span>Software Testing</li>
+          <li><span class="skill__icon" aria-hidden="true">Fix</span>Preventive Maintenance &amp; Diagnostic Troubleshooting</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience" data-nav-group="experience">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Experience</p>
+      <h2 class="section__title">Where I've <span class="accent">Worked</span></h2>
+    </header>
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <article class="card">
+          <div class="card__head">
+            <div>
+              <h3>Physics Instructor</h3>
+              <p class="card__sub">Progoti Academy · Gulshan, Dhaka, Bangladesh (Hybrid)</p>
+            </div>
+            <span class="date">Nov 2024 – Present</span>
+          </div>
+          <ul class="list">
+            <li>Conduct physics classes and interactive problem-solving sessions for Class 9 and Class 10 students, breaking complex concepts into easily understood lessons.</li>
+            <li>Coordinate with students and academic staff in a hybrid learning environment, building communication, time management and interpersonal skills.</li>
+          </ul>
+        </article>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section section--alt" id="education" data-nav-group="experience">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Education</p>
+      <h2 class="section__title">Academic <span class="accent">Background</span></h2>
+    </header>
+    <div class="edu">
+      <article class="card edu__main reveal">
+        <img class="edu__campus-image" src="public/images/image.png" width="4239" height="2383" alt="American International University-Bangladesh campus" loading="lazy">
+        <div class="card__head">
+          <div>
+            <h3>Bachelor of Science in Computer Science and Engineering</h3>
+            <p class="card__sub">American International University-Bangladesh (AIUB)</p>
+          </div>
+          <span class="date">2022 – 2026</span>
+        </div>
+        <p class="grade"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg> CGPA: 3.94 / 4.00</p>
+        <h4 class="mini-title">Relevant coursework</h4>
+        <ul class="tags">
+          <li>Data Structures and Algorithms</li>
+          <li>Object-Oriented Programming (Java, C#, C++)</li>
+          <li>Advanced Database Management Systems (Oracle, MySQL, PL/SQL)</li>
+          <li>Web Development</li>
+          <li>Computer Networks</li>
+          <li>Deep Learning</li>
+          <li>Statistical Data Analysis</li>
+          <li>Computer Vision and Pattern Recognition</li>
+          <li>Computer Graphics Design</li>
+          <li>Computer-Aided Design (AutoCAD)</li>
+          <li>Assembly Language</li>
+        </ul>
+      </article>
+      <div class="edu__side">
+        <article class="card edu__school reveal">
+          <img class="edu__campus-image" src="public/images/R.C.C.I_Public_School_&_College,_Rangpur_03.jpg" alt="Rangpur Chamber of Commerce and Industries Public School and College campus" loading="lazy">
+          <div class="card__head">
+            <div>
+              <h3>Higher Secondary Certificate (HSC)</h3>
+              <p class="card__sub">Rangpur Chamber of Commerce and Industries Public School and College</p>
+            </div>
+            <span class="date">2019 – 2021</span>
+          </div>
+          <p class="grade"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg> GPA: 5.00 / 5.00</p>
+        </article>
+        <article class="card edu__school reveal">
+          <img class="edu__campus-image" src="public/images/merchaints.jpg" alt="Chilahati Merchants High School building" loading="lazy">
+          <div class="card__head">
+            <div>
+              <h3>Secondary School Certificate (SSC)</h3>
+              <p class="card__sub">Chilahati Merchants High School</p>
+            </div>
+            <span class="date">2019</span>
+          </div>
+          <p class="grade"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg> GPA: 4.73 / 5.00</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="section" id="certifications" data-nav-group="experience">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Certifications</p>
+      <h2 class="section__title">Verified <span class="accent">Competencies</span></h2>
+    </header>
+    <article class="card cert reveal">
+      <span class="project__icon"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></span>
+      <div class="cert__body">
+        <div class="card__head">
+          <div>
+            <h3>IT Essentials (Certificate of Course Completion)</h3>
+            <p class="card__sub">Cisco Networking Academy · American International University-Bangladesh</p>
+          </div>
+          <span class="date">9 Aug 2023</span>
+        </div>
+        <ul class="tags">
+          <li>PC component selection &amp; installation</li>
+          <li>Safe lab procedures</li>
+          <li>Preventive maintenance</li>
+          <li>Windows / OS X / Linux / Mobile OS configuration &amp; troubleshooting</li>
+          <li>LAN &amp; cloud device configuration</li>
+          <li>Printer installation &amp; sharing</li>
+          <li>Basic host, data &amp; network security</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ RESEARCH ============ -->
+<section class="section section--alt" id="research" data-nav-group="research">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Research &amp; Publications</p>
+      <h2 class="section__title">Published <span class="accent">Research</span></h2>
+    </header>
+    <article class="card paper reveal">
+      <span class="project__icon"><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg></span>
+      <div class="paper__body">
+        <span class="status-pill"><svg class="icon icon--sm" aria-hidden="true"><use href="#i-check"/></svg> Accepted · Full Research Paper</span>
+        <h3>Predicting Emergence from Post-Traumatic Amnesia Within Inpatient Rehabilitation: How Much Is Recovery and How Much Is Discharge Timing?</h3>
+        <p class="paper__authors"><strong>Mohammad Ali Masud</strong> (First Author), Md. Mahabubur Rahaman Siam, Sanjida Afrin Bristi, Abdullah Al Shaihid Mahem and Sharfuddin Mahmood</p>
+        <p class="paper__venue">IEEE CSDE 2026 Conference · to be published in IEEE Xplore</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section" id="activities" data-nav-group="research">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Activities</p>
+      <h2 class="section__title">Beyond the <span class="accent">Classroom</span></h2>
+    </header>
+    <div class="grid grid--2">
+      <article class="card feature reveal">
+        <div class="activity__images">
+          <img src="public/images/football.jpg" alt="AIUB football team" loading="lazy">
+          <img src="public/images/cricket.jpg" alt="AIUB cricket team" loading="lazy">
+        </div>
+        <svg class="icon feature__icon feature__icon--orange" aria-hidden="true"><use href="#i-trophy"/></svg>
+        <h3>AIUB Cricket &amp; Football Teams</h3>
+        <p class="feature__meta">Active team member · 2022 – 2026</p>
+        <p>Represented AIUB in inter-university and intra-university tournaments for four consecutive years, building teamwork, leadership, discipline and collaboration under pressure.</p>
+      </article>
+      <article class="card feature reveal">
+        <svg class="icon feature__icon feature__icon--blue" aria-hidden="true"><use href="#i-bulb"/></svg>
+        <h3>Programming Contests &amp; Tech Showcases</h3>
+        <p class="feature__meta">Participant · University events</p>
+        <p>Took part in academic project exhibitions and collaborative engineering problem-solving sessions to develop practical software and networking solutions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--alt" id="contact" data-nav-group="contact">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__line"></span>Contact</p>
+      <h2 class="section__title">Let's <span class="accent">Talk</span></h2>
+    </header>
+    <div class="contact__grid">
+      <div class="card contact__info reveal">
+        <ul class="contact__list">
+          <li>
+            <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+            <div><span class="contact__label">Email</span><a href="mailto:mohammaddalimasud1010@gmail.com">mohammaddalimasud1010@gmail.com</a></div>
+          </li>
+          <li>
+            <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <div><span class="contact__label">Mobile</span><a href="tel:+8801791842989">+880 1791-842989</a></div>
+          </li>
+          <li>
+            <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+            <div><span class="contact__label">LinkedIn</span><a href="https://linkedin.com/in/mohammad-ali-masud-28341a278" target="_blank" rel="noopener noreferrer">mohammad-ali-masud-28341a278</a></div>
+          </li>
+          <li>
+            <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span>
+            <div><span class="contact__label">GitHub</span><a href="https://github.com/masud-ali" target="_blank" rel="noopener noreferrer">github.com/masud-ali</a></div>
+          </li>
+          <li>
+            <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <div><span class="contact__label">Location</span><span>Kuratoli, Kuril, Dhaka, Bangladesh</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="card form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+          <p class="field__error" id="name-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="field__error" id="email-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+          <p class="field__error" id="message-error" role="alert"></p>
+        </div>
+        <button class="btn btn--primary" type="submit">
+          <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg> Send Message
+        </button>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="form__hint">This site has no server. Sending opens your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>&copy; <span id="year">2026</span> Mohammad Ali Masud. All rights reserved.</p>
+    <nav aria-label="Footer">
+      <ul class="footer__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <ul class="socials socials--sm" aria-label="Social links">
+      <li><a href="https://github.com/masud-ali" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+      <li><a href="https://linkedin.com/in/mohammad-ali-masud-28341a278" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+      <li><a href="mailto:mohammaddalimasud1010@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
