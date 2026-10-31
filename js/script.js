@@ -197,16 +197,34 @@
 
   if (videoFrame && videoEmbed && videoPlayButton) {
     var videoSrc = videoFrame.getAttribute('data-video-src');
-    videoPlayButton.addEventListener('click', function () {
+
+    function startVideo() {
       if (!videoSrc) return;
-      videoEmbed.setAttribute('src', videoSrc);
-      videoFrame.classList.add('is-playing');
-      videoPlayButton.setAttribute('aria-label', 'Video is playing');
+      if (!videoFrame.classList.contains('is-playing')) {
+        videoEmbed.setAttribute('src', videoSrc);
+        videoFrame.classList.add('is-playing');
+        videoPlayButton.setAttribute('aria-label', 'Video is playing');
+      }
+    }
+
+    videoPlayButton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      startVideo();
+    });
+
+    videoFrame.addEventListener('click', function (e) {
+      if (e.target !== videoEmbed && !videoFrame.classList.contains('is-playing')) {
+        startVideo();
+      }
     });
 
     videoEmbed.addEventListener('load', function () {
-      videoFrame.classList.add('is-playing');
+      var currentSrc = videoEmbed.getAttribute('src');
+      if (currentSrc && currentSrc !== '' && currentSrc !== 'about:blank') {
+        videoFrame.classList.add('is-playing');
+      }
     });
+
     videoEmbed.addEventListener('error', function () {
       videoFrame.classList.remove('is-playing');
     });
