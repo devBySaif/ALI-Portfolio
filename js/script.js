@@ -192,18 +192,28 @@
 
   /* ---------- Video thumbnail / preview state ---------- */
   var videoFrame = document.querySelector('.video-cv__frame');
+  var videoVideo = document.querySelector('.video-cv__video');
   var videoEmbed = document.querySelector('.video-cv__embed');
   var videoPlayButton = document.querySelector('.video-cv__play');
 
-  if (videoFrame && videoEmbed && videoPlayButton) {
+  if (videoFrame && videoPlayButton) {
     var videoSrc = videoFrame.getAttribute('data-video-src');
 
     function startVideo() {
-      if (!videoSrc) return;
-      if (!videoFrame.classList.contains('is-playing')) {
+      if (videoFrame.classList.contains('is-playing')) return;
+      videoFrame.classList.add('is-playing');
+      videoPlayButton.setAttribute('aria-label', 'Video is playing');
+
+      if (videoVideo) {
+        var playPromise = videoVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function () {
+            // Handled if browser policies require direct user activation
+          });
+        }
+      } else if (videoEmbed && videoSrc) {
+        videoEmbed.style.display = 'block';
         videoEmbed.setAttribute('src', videoSrc);
-        videoFrame.classList.add('is-playing');
-        videoPlayButton.setAttribute('aria-label', 'Video is playing');
       }
     }
 
@@ -212,22 +222,55 @@
       startVideo();
     });
 
-    videoFrame.addEventListener('click', function (e) {
-      if (e.target !== videoEmbed && !videoFrame.classList.contains('is-playing')) {
+    // Prevent accidental mobile scroll taps from starting video:
+    var touchMoved = false;
+    videoFrame.addEventListener('touchstart', function () {
+      touchMoved = false;
+    }, { passive: true });
+
+    videoFrame.addEventListener('touchmove', function () {
+      touchMoved = true;
+    }, { passive: true });
+
+    videoFrame.addEventListener('touchend', function (e) {
+      if (!touchMoved && !videoFrame.classList.contains('is-playing')) {
         startVideo();
       }
     });
 
-    videoEmbed.addEventListener('load', function () {
-      var currentSrc = videoEmbed.getAttribute('src');
-      if (currentSrc && currentSrc !== '' && currentSrc !== 'about:blank') {
-        videoFrame.classList.add('is-playing');
+    videoFrame.addEventListener('click', function (e) {
+      if (e.target !== videoVideo && e.target !== videoEmbed && !videoFrame.classList.contains('is-playing')) {
+        startVideo();
       }
     });
 
-    videoEmbed.addEventListener('error', function () {
-      videoFrame.classList.remove('is-playing');
-    });
+    if (videoVideo) {
+      videoVideo.addEventListener('ended', function () {
+        videoFrame.classList.remove('is-playing');
+        videoPlayButton.setAttribute('aria-label', 'Play video introduction');
+      });
+
+      // If video element fails to load any source, fallback to Google Drive iframe
+      videoVideo.addEventListener('error', function () {
+        if (videoEmbed && videoSrc) {
+          videoVideo.style.display = 'none';
+          videoEmbed.style.display = 'block';
+          videoEmbed.setAttribute('src', videoSrc);
+        }
+      });
+    }
+
+    if (videoEmbed) {
+      videoEmbed.addEventListener('load', function () {
+        var currentSrc = videoEmbed.getAttribute('src');
+        if (currentSrc && currentSrc !== '' && currentSrc !== 'about:blank') {
+          videoFrame.classList.add('is-playing');
+        }
+      });
+      videoEmbed.addEventListener('error', function () {
+        videoFrame.classList.remove('is-playing');
+      });
+    }
   }
 
   /* ---------- Footer year ---------- */

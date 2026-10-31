@@ -234,13 +234,24 @@
         <button class="video-cv__play" type="button" aria-label="Play video introduction">
           <span class="video-cv__play-icon" aria-hidden="true"></span>
         </button>
+        <video
+          class="video-cv__video"
+          controls
+          playsinline
+          preload="metadata"
+          poster="public/images/profile.png">
+          <source src="public/videocv/portfoliovideo.mp4" type="video/mp4">
+          <source src="https://drive.usercontent.google.com/download?id=1nPWRuAOOBLEoatCQAEPntMtHfRIcVJik&export=download" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <iframe
           class="video-cv__embed"
           src=""
           title="Mohammad Ali Masud - Video Introduction"
           allow="autoplay; fullscreen"
           allowfullscreen
-          loading="lazy">
+          loading="lazy"
+          style="display: none;">
         </iframe>
       </div>
     </div>

@@ -1,2 +1,2 @@
-public/videocv/portfoliovideo.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
+# Text and binary files configuration
+* text=auto

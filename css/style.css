@@ -395,6 +395,7 @@ button { cursor: pointer; }
   pointer-events: none;
 }
 .video-cv__embed,
+.video-cv__video,
 .video-cv__frame video {
   position: absolute;
   inset: 0;
@@ -411,7 +412,9 @@ button { cursor: pointer; }
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.video-cv__frame.is-playing .video-cv__embed {
+.video-cv__frame.is-playing .video-cv__embed,
+.video-cv__frame.is-playing .video-cv__video,
+.video-cv__frame.is-playing video {
   opacity: 1;
   visibility: visible;
 }
@@ -615,6 +618,11 @@ button { cursor: pointer; }
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: aspect-ratio 0.35s ease, max-height 0.35s ease, border-radius 0.3s ease;
+  }
+  .video-cv__frame.is-playing {
+    aspect-ratio: 9 / 14;
+    max-height: 72vh;
   }
   .video-cv__play {
     width: 58px;
