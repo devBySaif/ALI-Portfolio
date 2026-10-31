@@ -1,0 +1,12 @@
+{
+  "name": "ali-portfolio",
+  "version": "1.0.0",
+  "description": "Static portfolio website for Mohammad Ali Masud",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
