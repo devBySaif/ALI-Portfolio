@@ -518,6 +518,23 @@ button { cursor: pointer; }
   .code-card .bar { height: 3px; }
   .status { left: 1%; gap: 0.4rem; padding: 0.4rem 0.55rem; font-size: 0.58rem; }
   .status strong { font-size: 0.65rem; }
+
+  .video-cv__frame {
+    width: min(100%, 100%);
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
+    border-radius: 18px;
+  }
+  .video-cv__play {
+    width: 72px;
+    height: 72px;
+  }
+  .video-cv__play-icon {
+    margin-left: 8px;
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 20px;
+  }
   .status__dot { width: 7px; height: 7px; }
   .tagline { right: 1%; }
   .footer__inner { flex-direction: column; text-align: center; }
