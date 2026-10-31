@@ -520,9 +520,10 @@ button { cursor: pointer; }
   .status strong { font-size: 0.65rem; }
 
   .video-cv__frame {
-    width: min(100%, 100%);
-    aspect-ratio: 4 / 3;
-    min-height: 320px;
+    width: 100%;
+    aspect-ratio: auto;
+    height: min(70vh, 500px);
+    min-height: 360px;
     border-radius: 18px;
   }
   .video-cv__play {
