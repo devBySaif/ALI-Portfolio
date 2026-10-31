@@ -190,6 +190,28 @@
     input.addEventListener('input', function () { setError(input, ''); });
   });
 
+  /* ---------- Video thumbnail / preview state ---------- */
+  var videoFrame = document.querySelector('.video-cv__frame');
+  var videoEmbed = document.querySelector('.video-cv__embed');
+  var videoPlayButton = document.querySelector('.video-cv__play');
+
+  if (videoFrame && videoEmbed && videoPlayButton) {
+    var videoSrc = videoFrame.getAttribute('data-video-src');
+    videoPlayButton.addEventListener('click', function () {
+      if (!videoSrc) return;
+      videoEmbed.setAttribute('src', videoSrc);
+      videoFrame.classList.add('is-playing');
+      videoPlayButton.setAttribute('aria-label', 'Video is playing');
+    });
+
+    videoEmbed.addEventListener('load', function () {
+      videoFrame.classList.add('is-playing');
+    });
+    videoEmbed.addEventListener('error', function () {
+      videoFrame.classList.remove('is-playing');
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

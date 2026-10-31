@@ -221,9 +221,14 @@
         <p class="eyebrow"><span class="eyebrow__line"></span>Video CV</p>
         <h2 class="section__title">My <span class="accent">Video Introduction</span></h2>
       </div>
-      <div class="video-cv__frame">
+      <div class="video-cv__frame video-cv__frame--thumb" data-video-src="https://drive.google.com/file/d/1nPWRuAOOBLEoatCQAEPntMtHfRIcVJik/preview">
+        <img class="video-cv__thumb" src="public/images/profile.png" alt="Video intro thumbnail" aria-hidden="true">
+        <button class="video-cv__play" type="button" aria-label="Play video intro">
+          <span class="video-cv__play-icon" aria-hidden="true"></span>
+        </button>
         <iframe
-          src="https://drive.google.com/file/d/1nPWRuAOOBLEoatCQAEPntMtHfRIcVJik/preview"
+          class="video-cv__embed"
+          src=""
           title="Video CV"
           allow="autoplay; fullscreen"
           allowfullscreen

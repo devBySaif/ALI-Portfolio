@@ -304,14 +304,31 @@ button { cursor: pointer; }
   font-size: clamp(2rem, 3vw, 3rem); line-height: 1.15; margin: 0;
 }
 .video-cv__frame {
-  width: min(100%, 1200px); margin: 0 auto; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative; width: min(100%, 1200px); margin: 0 auto; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 26px; background: #000; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
   aspect-ratio: 16 / 9;
 }
-.video-cv__frame iframe,
+.video-cv__thumb {
+  position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; visibility: visible; transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.video-cv__play {
+  position: absolute; left: 50%; top: 50%; z-index: 2; width: 82px; height: 82px; border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.09); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); cursor: pointer;
+}
+.video-cv__play-icon {
+  display: block; width: 0; height: 0; margin-left: 10px; border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-left: 24px solid rgba(255, 255, 255, 0.95);
+}
+.video-cv__frame.is-playing .video-cv__play,
+.video-cv__frame.is-playing .video-cv__thumb {
+  opacity: 0; visibility: hidden;
+}
+.video-cv__embed,
 .video-cv__frame video {
-  display: block; width: 100%; height: 100%; background: #000; object-fit: contain; object-position: center center;
-  border: 0; transform: scale(1.0);
+  position: absolute; inset: 0; z-index: 1; display: block; width: 100%; height: 100%; background: #000; object-fit: contain; object-position: center center;
+  border: 0; transform: scale(1.0); opacity: 0; visibility: hidden; transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.video-cv__frame.is-playing .video-cv__embed {
+  opacity: 1; visibility: visible;
 }
 
 /* Projects */
